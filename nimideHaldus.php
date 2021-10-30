@@ -36,9 +36,12 @@ if(isset($_REQUEST["kustuta"])) {
     <html lang="et">
     <head>
         <title>Haldusleht</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style/style.css">
     </head>
     <body>
-    <h1>Uue nimi lisamine</h1>
+    <?php include ('navigation.php');?>
+    <h2>Uue nimi lisamine</h2>
     <form action="?">
         <label for="uusnimi">Nimi</label>
         <input type="text" id="uusnimi" name="uusnimi" placeholder="uus nimi">
@@ -70,7 +73,7 @@ if(isset($_REQUEST["kustuta"])) {
         echo "<td>".htmlspecialchars($nimi)."</td>";
         echo "<td>".($seisund)."</td>";
         echo "<td><a href='?$param=$id'>$avatekst</a></td>";
-        echo "<td><a href='".strtok(basename($_SERVER['REQUEST_URI']),"&")."&kustuta=$id'>Kustuta</a></td>";
+        echo "<td><span class='letter'><a href='".strtok(basename($_SERVER['REQUEST_URI']),"&")."&kustuta=$id'>&#10060;</a></span></td>";
         echo "</tr>";
     }
     echo "</table>";

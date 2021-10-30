@@ -1,0 +1,38 @@
+td, tr {
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+}
+table, th, td {
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-right: auto;
+    border-collapse: collapse;
+    letter-spacing: 1px;
+}
+tr{
+    margin: auto;
+}
+th{
+    background: #555;
+    color: #fff;
+}
+td{
+    background: #eee;
+}
+
+input[type=submit] {
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+h1{
+    text-align: -moz-left;
+    font-size: 30px;
+}
+.letter {
+    color: red; /* Цвет символа */
+}
